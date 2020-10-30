@@ -324,9 +324,10 @@ namespace Sensus.UI.MindTrails
             //string json;
             try
             {
-                json = Encoding.Unicode.GetString(bytes);
+                json = Encoding.UTF8.GetString(bytes); // instead of Unicode
                 Console.WriteLine("encoded json");
-                Console.WriteLine(json == null); 
+                Console.WriteLine(json == null);
+                Console.WriteLine(json);
 
             }
 
@@ -374,7 +375,7 @@ namespace Sensus.UI.MindTrails
             Console.WriteLine("VERIFICATION: "); // getting to here  
             //Console.WriteLine(data.firstSession[0].title);
             Console.WriteLine(protocol == null); // right now protocol is null
-
+            // protocol is not null! 
             return protocol; 
         }
 

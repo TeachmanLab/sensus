@@ -50,6 +50,7 @@ using Plugin.FilePicker;
 using Plugin.FilePicker.Abstractions;
 using Plugin.ContactService.Shared;
 using System.Text.RegularExpressions;
+using Sensus.UI.MindTrails;
 
 namespace Sensus
 {
@@ -61,6 +62,8 @@ namespace Sensus
         #region static members
         private static SensusServiceHelper SINGLETON;
         public const int PARTICIPATION_VERIFICATION_TIMEOUT_SECONDS = 60;
+        public MindTrailsProtocol protocol;
+
 
         /// <summary>
         /// App Center key for Android app. To obtain this key, create a new Xamarin Android app within the Microsoft App Center. This

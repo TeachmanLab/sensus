@@ -240,6 +240,7 @@ namespace Sensus.UI.MindTrails
             blueLayout.Children.Add(fromURL);
             blueLayout.Children.Add(back);
 
+
         }
 
         private Tuple<string, string> ParseManagedProtocolURL(string url)

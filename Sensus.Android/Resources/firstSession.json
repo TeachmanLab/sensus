@@ -1,4 +1,6 @@
-[
+{
+
+  "firstSession" : [
     {
       "block": 1,
       "name": "neighbor",
@@ -16,7 +18,7 @@
       "format": "Visual",
       "immersion": "picture",
       "ifthen": "If I reach out to someone and they don't respond, then I will remind myself they are probably not ignoring me on purpose.",
-      "image" :  "neighbor.png"
+      "image": "neighbor.png"
     },
     {
       "block": 1,
@@ -529,7 +531,7 @@
       "format": "Visual",
       "immersion": "picture",
       "ifthen": "If I'm waiting to hear news from a doctor, then I will remind myself that I will can handle what they tell me.",
-      "image" :  "mole.png"
+      "image": "mole.png"
     },
     {
       "block": 3,
@@ -760,3 +762,4 @@
       "image": "colleagues.png"
     }
   ]
+}

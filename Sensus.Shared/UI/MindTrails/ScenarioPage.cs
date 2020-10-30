@@ -134,13 +134,16 @@ namespace Sensus.UI.MindTrails
 
             using (var reader = new StreamReader(stream)) 
             {
-                var json = reader.ReadToEnd(); 
-                var data = JsonConvert.DeserializeObject<Root>(json); // Root is from SessionModel.cs
+                var json = reader.ReadToEnd();
+                Root data = JsonConvert.DeserializeObject<Root>(json); // Root is from SessionModel.cs
 
                 if (scenarioCounter < 40) // max number of scenarios 
                 {
-                    scenarioName.Text = MindTrailsProtocol.protocol.Session[scenarioCounter].title;
-                    scenarioImage.Source = MindTrailsProtocol.protocol.Session[scenarioCounter].image;
+                    //scenarioName.Text = MindTrailsProtocol.protocol.Session[scenarioCounter].title;
+                    scenarioName.Text = data.firstSession[scenarioCounter].title;
+                    //scenarioImage.Source = MindTrailsProtocol.protocol.Session[scenarioCounter].image;
+                    scenarioImage.Source = data.firstSession[scenarioCounter].image;
+
 
                 }
 

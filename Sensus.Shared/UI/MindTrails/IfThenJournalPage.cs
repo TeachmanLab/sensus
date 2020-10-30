@@ -198,7 +198,9 @@ namespace Sensus.UI.MindTrails
                 var json = reader.ReadToEnd();
                 var data = JsonConvert.DeserializeObject<Root>(json);
 
-                string input = MindTrailsProtocol.protocol.Session[scenarioCounter - 1].ifthen; //  - 1
+                //string input = MindTrailsProtocol.protocol.Session[scenarioCounter - 1].ifthen; //  - 1
+                string input = data.firstSession[scenarioCounter - 1].ifthen; //  - 1
+
 
                 string ifString = input.Substring(3, input.LastIndexOf(", then", input.Length) - 3);
                 ifString += "...";

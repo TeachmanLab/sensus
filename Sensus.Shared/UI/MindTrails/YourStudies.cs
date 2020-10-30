@@ -39,12 +39,30 @@ namespace Sensus.UI.MindTrails
                 HorizontalOptions = LayoutOptions.Center,
                 CornerRadius = 8,
                 WidthRequest = 150,
- 
+
+            };
+            Button next = new Button
+            {
+                Text = "Next",
+                Margin = new Thickness(10, 20, 10, 35),
+                TextColor = Color.Black,
+                BackgroundColor = Color.FromHex("48AADF"),
+                FontFamily = "Source Sans Pro",
+                FontSize = 20,
+                FontAttributes = FontAttributes.Bold,
+                HorizontalOptions = LayoutOptions.Center,
+                CornerRadius = 8,
+                WidthRequest = 150,
+
             };
 
             addStudy.Clicked += AddStudy_Clicked;
+            next.Clicked += Next_Clicked;
+
 
             _contentStack.Children.Add(addStudy);
+            _contentStack.Children.Add(next);
+
 
             async void AddStudy_Clicked(object sender, EventArgs args)
             {
@@ -58,8 +76,13 @@ namespace Sensus.UI.MindTrails
                 await PopupNavigation.Instance.PushAsync(new AddStudyPopUp());
             };
 
+            async void Next_Clicked(object sender, EventArgs args)
+            {
+
+                await Navigation.PushModalAsync(new NavigationPage(new HomePage()));
+
+            }
 
         }
-
     }
 }
